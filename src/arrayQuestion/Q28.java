@@ -1,0 +1,29 @@
+package arrayQuestion;
+
+public class Q28 {
+	public static void main(String[] args) {
+		int arr [] = {7,0,2,6,0,4};
+		shiftAllZeroToRight(arr);
+	}
+	public static void shiftAllZeroToRight(int arr[]) {
+		
+		int n= arr.length;
+		int index= 0;
+		for(int i=0; i<n; i++) {
+			if(arr[i]!=0) {
+				arr[index]=arr[i];
+				index++;
+			}
+			
+		}
+		while(index<n) {
+			arr[index]=0;
+			index++;
+		}
+		
+		for(int i=0; i<arr.length;i++) {
+			System.out.print((arr[i]+ " "));
+			}
+	}
+
+}
